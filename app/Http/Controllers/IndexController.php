@@ -49,7 +49,8 @@ class IndexController extends Controller
 
     public function news()
     {
-        return view('pages.news');
+        $news = News::all();
+        return view('pages.news', compact('news'));
     }
 
     public function single($slug) {
