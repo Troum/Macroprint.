@@ -10,16 +10,14 @@
                                 {{$new->title}}
                             </div>
                             <div class="col-sm-4 newsDate">
-                                Опубликовано
-                                <br>
                                 <script>
                                     $(document).ready(function () {
-                                        $('.newsDate').append('<span>'+new Date('{{$new->created_at}}').toLocaleDateString('ru',{month:'long', day: 'numeric', year: 'numeric'})+'</span>');
+                                        $('.newsDate').html('Опубликовано'+'<br>'+ new Date('{{$new->created_at}}').toLocaleDateString('ru',{month:'long', day: 'numeric', year: 'numeric'}));
                                     });
                                 </script>
                             </div>
                         </div>
-                        <img class="col-sm-5 newsCardImg" align="left" src="{{asset($new->cover)}}" alt="">
+                        <img class="col-sm-5 newsCardImg" align="left" src="{{asset('/img/news/'.$new->cover)}}" alt="">
                         {!! $new->new !!}
                         <div class="col-sm-4 col-sm-offset-8 taR R sL">
                             <a href="" class="link btn-social vk">

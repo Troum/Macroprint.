@@ -15,5 +15,16 @@ return [
 
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'login' => 'Login',
+    'password' => 'Password',
+    'register' => 'Register',
+    'email' => 'E-Mail Adress',
+    'remember' => 'Remember Me',
+    'forgot' => 'Forgot Your Password?',
+    'name' => 'Name',
+    'confirm' => 'Confirm Password',
+    'admin' => 'Macroprint',
+    'logout' => 'Logout',
+    'dashboard' => 'Dashboard'
 
 ];

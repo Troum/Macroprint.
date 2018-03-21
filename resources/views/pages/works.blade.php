@@ -1,39 +1,23 @@
 @extends('layout')
 @section('content')
+    {{csrf_field()}}
     <div class="container">
         <div class="col-sm-10 col-sm-offset-1">
             <div class="col-sm-12">
                 <h3 class="cntnH">
                     <div style="width: 26%">НАШИ РАБОТЫ</div>
                 </h3>
-                <div class="col-sm-12" style="margin-bottom: 32px">
-                    <span id="w1" class="work-nav active">все</span>
-                    <span id="w2" class="work-nav">щитовые конструкции</span>
-                    <span id="w3" class="work-nav">брендмауэры</span>
-                    <span id="w4" class="work-nav">лайтпостеры</span>
-                    <span id="w5" class="work-nav">призматроны</span>
-                    <span id="w6" class="work-nav">интерьер</span>
-                    <span id="w7" class="work-nav">транспорт</span>
+                <a href="/works/all">all</a>
+                <div id="gallery-choose" class="col-sm-12" style="margin-bottom: 32px">
+                    <span data-slug="all" data-src="/works/all" id="w1" class="work-nav active">все</span>
+                    @foreach($services as $service)
+                        <span data-slug="{{$service->slug}}" data-src="/works/{{$service->slug}}" id="w1" class="work-nav text-lowercase">{{$service->name}}</span>
+                    @endforeach
                 </div>
-                <div class="col-sm-12" style="margin-bottom: 64px">
-                    <div class="col-sm-4 p0">
-                        <img class="col-sm-12 work-img" src="{{asset('/img/cntnOld.png')}}" alt="">
-                    </div>
-                    <div class="col-sm-4 p0">
-                        <img class="col-sm-12 work-img" src="{{asset('/img/cntnOld.png')}}" alt="">
-                    </div>
-                    <div class="col-sm-4 p0">
-                        <img class="col-sm-12 work-img" src="{{asset('/img/cntnOld.png')}}" alt="">
-                    </div>
-                    <div class="col-sm-4 p0">
-                        <img class="col-sm-12 work-img" src="{{asset('/img/cntnOld.png')}}" alt="">
-                    </div>
-                    <div class="col-sm-4 p0">
-                        <img class="col-sm-12 work-img" src="{{asset('/img/cntnOld.png')}}" alt="">
-                    </div>
-                    <div class="col-sm-4 p0">
-                        <img class="col-sm-12 work-img" src="{{asset('/img/cntnOld.png')}}" alt="">
-                    </div>
+                <div id="gallery" class="row" style="margin-bottom: 64px">
+                    @foreach($gallery as $photo)
+                        <div class="col-sm-4 h-100" style="height: 212px; background-size: cover; background-image: url({{asset('/img/gallery/'.$photo->category.'/'.$photo->photo)}});"></div>
+                    @endforeach
                 </div>
             </div>
         </div>

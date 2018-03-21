@@ -115,91 +115,24 @@
                 <h3 class="cntnH"><div style="width: 30%">НАША КОМАНДА</div></h3>
             </div>
             <div class="col-sm-1"></div>
+            @foreach($team as $one)
             <div class="col-sm-2">
                 <div class="col-sm-12 team-card p0">
-                    <img class="col-sm-12 about-img p0" src="{{asset('/img/teamCardImg.png')}}">
+                    <img class="col-sm-12 about-img p0" src="{{asset('/img/team/'.$one->photo)}}">
                     <div class="col-sm-12 teamCardContent">
-                        <div class="col-sm-12 workerName">Дмитрий Пронин</div>
+                        <div class="col-sm-12 workerName">{{$one->name}}</div>
                         <div class="col-sm-12">
                             <div class="col-sm-4 col-sm-offset-3 teamCardSepar"></div>
                         </div>
-                        <div class="col-sm-12 positionInTeam ">директор</div>
+                        <div class="col-sm-12 positionInTeam ">{{$one->position}}</div>
                         <div class="col-sm-12 workerAbout p0">
-                            Завоевал себе репутацию надежного и ответственного
-                            изготовителя качественной пролиграфической продукции
+                            {!! $one->description !!}
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div class="col-sm-2">
-                <div class="col-sm-12 team-card p0">
-                    <img class="col-sm-12 about-img p0" src="{{asset('/img/teamCardImg.png')}}">
-                    <div class="col-sm-12 teamCardContent">
-                        <div class="col-sm-12 workerName">Дмитрий Пронин</div>
-                        <div class="col-sm-12">
-                            <div class="col-sm-4 col-sm-offset-3 teamCardSepar"></div>
-                        </div>
-                        <div class="col-sm-12 positionInTeam ">директор</div>
-                        <div class="col-sm-12 workerAbout p0">
-                            Завоевал себе репутацию надежного и ответственного
-                            изготовителя качественной пролиграфической продукции
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="col-sm-12 team-card p0">
-                    <img class="col-sm-12 about-img p0" src="{{asset('/img/teamCardImg.png')}}">
-                    <div class="col-sm-12 teamCardContent">
-                        <div class="col-sm-12 workerName">Дмитрий Пронин</div>
-                        <div class="col-sm-12">
-                            <div class="col-sm-4 col-sm-offset-3 teamCardSepar"></div>
-                        </div>
-                        <div class="col-sm-12 positionInTeam ">директор</div>
-                        <div class="col-sm-12 workerAbout p0">
-                            Завоевал себе репутацию надежного и ответственного
-                            изготовителя качественной пролиграфической продукции
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="col-sm-12 team-card p0">
-                    <img class="col-sm-12 about-img p0" src="{{asset('/img/teamCardImg.png')}}">
-                    <div class="col-sm-12 teamCardContent">
-                        <div class="col-sm-12 workerName">Дмитрий Пронин</div>
-                        <div class="col-sm-12">
-                            <div class="col-sm-4 col-sm-offset-3 teamCardSepar"></div>
-                        </div>
-                        <div class="col-sm-12 positionInTeam ">директор</div>
-                        <div class="col-sm-12 workerAbout p0">
-                            Завоевал себе репутацию надежного и ответственного
-                            изготовителя качественной пролиграфической продукции
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="col-sm-12 team-card p0">
-                    <img class="col-sm-12 about-img p0" src="{{asset('/img/teamCardImg.png')}}">
-                    <div class="col-sm-12 teamCardContent">
-                        <div class="col-sm-12 workerName">Дмитрий Пронин</div>
-                        <div class="col-sm-12">
-                            <div class="col-sm-4 col-sm-offset-3 teamCardSepar"></div>
-                        </div>
-                        <div class="col-sm-12 positionInTeam ">директор</div>
-                        <div class="col-sm-12 workerAbout p0">
-                            Завоевал себе репутацию надежного и ответственного
-                            изготовителя качественной пролиграфической продукции
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            @endforeach
             <div class="col-sm-1"></div>
         </div>
     </div>

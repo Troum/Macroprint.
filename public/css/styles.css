@@ -19,6 +19,7 @@ hr {
 .mL {
     height: 96px;
     line-height: 96px;
+    position: absolute;
 }
 .mL-sm {
     height: 48px;
@@ -79,6 +80,109 @@ a.hrf.b {
     padding: 2px 12px;
 }
 
+#burgerMenu {
+    left: 48px;
+    display: none;
+    position: absolute;
+    line-height: 72px;
+    opacity: .7;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+}
+
+#burgerMenu:hover {
+    opacity: 1;
+}
+
+#subMenu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    display: none;
+}
+
+#subMenu>.subNavMenu {
+    height: 100%;
+    background: #ffffff;
+    z-index: 50;
+}
+
+.showen {
+    display: block !important;
+}
+
+.sub-nav-btn {
+    padding: 8px 24px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 4px;
+    color: #000;
+    display: block;
+    text-align: center;
+    opacity: .54;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+}
+
+.sub-nav-btn:hover {
+    opacity: 1;
+    color: #000;
+}
+
+#closeSubNav {
+    margin-top: 100px;
+    background: #ffa231;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    opacity: 1;
+    color: #fff;
+    cursor: pointer;
+}
+
+#closeSubNav:hover {
+    background: #ec6600;
+    color: #fff;
+}
+
+#subMenu>.shadow {
+    background: #00000054;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.feedback {
+    height: 54px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 4px 0 0 8px;
+    color: rgba(0,0,0,0.54);
+}
+
+.fbInput {
+    border: 0px;
+    border-bottom: 1px dashed;
+    height: 18px;
+    outline: none !important;
+}
+
+@media screen and (max-width:1220px){
+    #mainMenu {
+        display: none !important;
+    }
+
+    #burgerMenu {
+        display: block !important;
+    }
+}
+
 @media screen and (max-width:768px){
 
     .cntnH:before {
@@ -91,6 +195,9 @@ a.hrf.b {
         width: 100% !important;
     }
 
+    .mL {
+        position: relative !important;
+    }
 
     .cardCnH {
         margin-bottom: 8px !important;
@@ -136,6 +243,11 @@ a.hrf.b {
 
 .w100 {
     width: 100%;
+}
+
+.h100 {
+    min-height: 100%;
+    height: calc(100% - 2em);
 }
 
 .flx {
@@ -199,6 +311,9 @@ a.hrf.b {
     display: inline-block;
     color: #000;
     border-bottom: 1px solid #fff;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -284,16 +399,25 @@ a.hrf.b {
     background: #fff;
     height: 19em;
     margin: 15px 0;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
 .cntImg {
     opacity: .54;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
     width: 100%;
 }
 
 .imgFlt {
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -313,6 +437,9 @@ a.hrf.b {
 .cardCnH {
     padding: 1.2em;
     margin-bottom: 32px;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -321,6 +448,9 @@ a.hrf.b {
     font-weight: 600;
     text-transform: uppercase;
     min-height: 48px;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -388,6 +518,9 @@ a.hrf.b {
     outline: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -400,6 +533,9 @@ a.hrf.b {
     outline: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -435,7 +571,7 @@ a.hrf.b {
 }
 
 .cardCn:hover>.cardCnB>.imgFlt>.cntImg {
-   opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 .cardCn:hover>.cardCnB>.btnFlt>.ccG {
@@ -513,6 +649,9 @@ a.hrf.b {
     font-size: 12px;
     background: transparent;
     border: 1px solid #979797;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -600,6 +739,9 @@ table>thead {
     padding: 8px;
     cursor: pointer;
     font-weight: 600;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -624,6 +766,9 @@ span.work-nav {
     padding: 4px 16px;
     color: rgba(0,0,0,0.54);
     cursor: pointer;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -638,7 +783,7 @@ span.work-nav:hover {
 }
 
 .work-img {
-    padding: 2px;
+    margin: 1px;
 }
 
 .newsCard {
@@ -694,6 +839,9 @@ span.work-nav:hover {
     cursor: pointer;
     overflow: auto;
     text-align: center;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -751,6 +899,9 @@ span.work-nav:hover {
     cursor: pointer;
     overflow: hidden;
     text-align: center;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -760,6 +911,9 @@ span.work-nav:hover {
 }
 
 .team-card>.teamCardContent {
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
     overflow: auto;
 }
@@ -797,6 +951,9 @@ span.work-nav:hover {
     color: rgba(0,0,0,.54);
     font-weight: 600;
     opacity: 0;
+    -webkit-transition: 200ms ease-in-out;
+    -moz-transition: 200ms ease-in-out;
+    -o-transition: 200ms ease-in-out;
     transition: 200ms ease-in-out;
 }
 
@@ -804,8 +961,18 @@ span.work-nav:hover {
     color: inherit;
 }
 
-.tel:hover, .link:hover, .mailto:hover, .tel:active, .mailto:active, .link:active {
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
+.tel:hover, .link:hover, .mailto:hover, .tel:active, .mailto:active, .link:active, .mailto:visited, .tel:visited, .link:visited {
+    color: inherit!important;
+    cursor: pointer!important;
+    text-decoration: none!important;
+}
+
+@media print {
+    header, footer, .printPath {
+        display:none;
+    }
+
+    th {
+        background-color: #ec971f;
+    }
 }

@@ -39,22 +39,22 @@
                     <div class="col-sm-12 fH t">
                         Информация
                     </div>
-                    <a href="./index.html" class="col-sm-12 hrf b">Главная</a>
-                    <a class="col-sm-12 hrf b">О нас</a>
-                    <a class="col-sm-12 hrf b">Наше оборудование</a>
-                    <a class="col-sm-12 hrf b">FAQ</a>
-                    <a class="col-sm-12 hrf b">Наша команда</a>
-                    <a class="col-sm-12 hrf b">Схема проезда</a>
+                    <a class="link col-sm-12 hrf b" href="/">Главная</a>
+                    <a class="link col-sm-12 hrf b" href="/about">О нас</a>
+                    <a class="link col-sm-12 hrf b" href="/devices">Наше оборудование</a>
+                    <a class="link col-sm-12 hrf b" href="/faq">FAQ</a>
+                    <a class="link col-sm-12 hrf b" href="/team">Наша команда</a>
+                    <a class="link col-sm-12 hrf b" href="/route">Схема проезда</a>
                 </div>
                 <div class="col-sm-3">
                     <div class="col-sm-12 fH t">
                         Сферы действия
                     </div>
-                    <a class="col-sm-12 hrf b">Клиенты</a>
-                    <a class="col-sm-12 hrf b">Галерея</a>
-                    <a class="col-sm-12 hrf b">Карта сайта</a>
-                    <a href="./price.html" class="col-sm-12 hrf b">Новости</a>
-                    <a class="col-sm-12 hrf b">Отзывы</a>
+                    <a class="link col-sm-12 hrf b" href="/clients">Клиенты</a>
+                    <a class="link col-sm-12 hrf b" href="/works">Наши работы</a>
+                    <a class="link col-sm-12 hrf b" href="/map">Карта сайта</a>
+                    <a class="link col-sm-12 hrf b" href="/news">Новости</a>
+                    <a class="link col-sm-12 hrf b" href="/review">Отзывы</a>
                 </div>
                 <div class="col-sm-3">
                     <div class="col-sm-12 fH t">
